@@ -1,7 +1,9 @@
 USE oil_indicators;
+DROP PROCEDURE IF EXISTS GetCombinedIndicators; 
+
 DELIMITER //
 
-DROP PROCEDURE IF EXISTS GetCombinedIndicators; 
+
 CREATE PROCEDURE GetCombinedIndicators()
 BEGIN
 	DROP TABLE IF EXISTS CombinedIndicators;
@@ -317,4 +319,5 @@ END //
 
 DELIMITER ;
 
+CALL GetCombinedIndicators();
 SELECT * FROM oil_indicators.combinedindicators;
