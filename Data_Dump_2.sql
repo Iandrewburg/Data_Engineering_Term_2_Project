@@ -52,7 +52,8 @@ CREATE TABLE `co2e` (
   `2019` double DEFAULT NULL,
   `2020` double DEFAULT NULL,
   `2021` double DEFAULT NULL,
-  `2022` double DEFAULT NULL
+  `2022` double DEFAULT NULL,
+  PRIMARY KEY (`Country_Code`, `Indicator_Code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -100,7 +101,9 @@ CREATE TABLE `co2e_from_manufacture` (
   `2019` double DEFAULT NULL,
   `2020` double DEFAULT NULL,
   `2021` double DEFAULT NULL,
-  `2022` double DEFAULT NULL
+  `2022` double DEFAULT NULL,
+  PRIMARY KEY (`Country_Code`, `Indicator_Code`),
+  FOREIGN KEY (`Country_Code`, `Indicator_Code`) REFERENCES co2e (`Country_Code`, `Indicator_Code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -148,7 +151,9 @@ CREATE TABLE `energy_prod_from_coal` (
   `2019` double DEFAULT NULL,
   `2020` double DEFAULT NULL,
   `2021` double DEFAULT NULL,
-  `2022` double DEFAULT NULL
+  `2022` double DEFAULT NULL,
+  PRIMARY KEY (`Country_Code`, `Indicator_Code`),
+  FOREIGN KEY (`Country_Code`, `Indicator_Code`) REFERENCES co2e (`Country_Code`, `Indicator_Code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -196,7 +201,9 @@ CREATE TABLE `energy_use` (
   `2019` double DEFAULT NULL,
   `2020` double DEFAULT NULL,
   `2021` double DEFAULT NULL,
-  `2022` double DEFAULT NULL
+  `2022` double DEFAULT NULL,
+  PRIMARY KEY (`Country_Code`, `Indicator_Code`),
+  FOREIGN KEY (`Country_Code`, `Indicator_Code`) REFERENCES co2e (`Country_Code`, `Indicator_Code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -244,7 +251,9 @@ CREATE TABLE `exports` (
   `2019` double DEFAULT NULL,
   `2020` double DEFAULT NULL,
   `2021` double DEFAULT NULL,
-  `2022` double DEFAULT NULL
+  `2022` double DEFAULT NULL,
+  PRIMARY KEY (`Country_Code`, `Indicator_Code`),
+  FOREIGN KEY (`Country_Code`, `Indicator_Code`) REFERENCES co2e (`Country_Code`, `Indicator_Code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -292,7 +301,9 @@ CREATE TABLE `gdp` (
   `2019` double DEFAULT NULL,
   `2020` double DEFAULT NULL,
   `2021` double DEFAULT NULL,
-  `2022` double DEFAULT NULL
+  `2022` double DEFAULT NULL,
+  PRIMARY KEY (`Country_Code`, `Indicator_Code`),
+  FOREIGN KEY (`Country_Code`, `Indicator_Code`) REFERENCES co2e (`Country_Code`, `Indicator_Code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
