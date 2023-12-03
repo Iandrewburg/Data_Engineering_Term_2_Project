@@ -295,12 +295,12 @@ BEGIN
     SELECT
        a.Country_Name,
         a.Year,
-        CASE WHEN a.co2e_Value = 0 THEN 'Null' ELSE a.co2e_Value END AS co2e_Value,
-        CASE WHEN b.gdp_Value = 0 THEN 'Null' ELSE b.gdp_Value END AS gdp_Value,
-        CASE WHEN c.co2e_manf_Value = 0 THEN 'Null' ELSE c.co2e_manf_Value END AS co2e_manf_Value,
-        CASE WHEN d.energy_prod_coal_Value = 0 THEN 'Null' ELSE d.energy_prod_coal_Value END AS energy_prod_coal_Value,
-        CASE WHEN e.energy_use_Value = 0 THEN 'Null' ELSE e.energy_use_Value END AS energy_use_Value,
-        CASE WHEN f.exports_Value = 0 THEN 'Null' ELSE f.exports_Value END AS exports_Value,
+        CASE WHEN a.co2e_Value = 0 THEN NULL ELSE a.co2e_Value END AS co2e_Value,
+        CASE WHEN b.gdp_Value = 0 THEN NULL ELSE b.gdp_Value END AS gdp_Value,
+        CASE WHEN c.co2e_manf_Value = 0 THEN NULL ELSE c.co2e_manf_Value END AS co2e_manf_Value,
+        CASE WHEN d.energy_prod_coal_Value = 0 THEN NULL ELSE d.energy_prod_coal_Value END AS energy_prod_coal_Value,
+        CASE WHEN e.energy_use_Value = 0 THEN NULL ELSE e.energy_use_Value END AS energy_use_Value,
+        CASE WHEN f.exports_Value = 0 THEN NULL ELSE f.exports_Value END AS exports_Value,
         CASE
             WHEN a.Country_Name IN ('Algeria', 'Angola', 'Congo, Rep.', 'Equatorial Guinea', 'Gabon', 'Iran, Islamic Rep.', 'Iraq', 'Kuwait', 'Libya', 'Nigeria', 'Saudi Arabia', 'United Arab Emirates', 'Venezuela, RB') THEN 1
             ELSE 0
