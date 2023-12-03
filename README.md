@@ -57,7 +57,7 @@ The data is provided on an annual granularity as the World Bank provides data on
 
 We have included two additional columns, one indicating G20 membership and another for OPEC country status, allowing us to conduct a correlation analysis for each group.
 
-As a result, we have created one visualization and one correlation matrix for each scenario, depending on whether the country belongs to the G20 or OPEC. For the correlation analysis, we have primarily relied on data concerning GDP, exports, and WTI, as many other indicators contained a significant number of missing values, making it challenging to obtain dependable results.
+As a result, we have created one visualization and one correlation matrix for each scenario, depending on whether the country belongs to the G20 or OPEC. For the correlation analysis, we have primarily relied on data concerning inflation, exports, and WTI, as many other indicators contained a significant number of missing values, making it challenging to obtain dependable results.
 
 ## EER Diagrams
 
@@ -84,7 +84,7 @@ We have used a MySQL connector to connect Knime with our database. The pipeline 
 
 ### OPEC Countries
 
-Based on the correlation matrix for OPEC countries, we observe that the correlation between exports and the average WTI, as well as the correlation between GDP value and the average WTI, is positive.
+Based on the correlation matrix for OPEC countries, we observe that the correlation between exports and the average WTI, as well as the correlation between inflation value and the average WTI, is positive.
 
 ![Correlation Matrix OPEC](https://github.com/Iandrewburg/Data_Engineering_Term_2_Project/blob/main/corr1.png)
 
@@ -94,6 +94,6 @@ Upon closer examination, we note that the correlation is not statistically signi
 ### G20 Countries
 ![Correltions G20](https://github.com/Iandrewburg/Data_Engineering_Term_2_Project/blob/main/cor3.png)
 
-Turning our attention to the correlations for G20 countries, we uncover different outcomes. A negative moderate correlation of -0.14 exists between exports and GDP, and it proves to be statistically significant at the 5% level. This suggests that as one indicator increases, the other decreases.
+Turning our attention to the correlations for G20 countries, we uncover different outcomes. A negative moderate correlation of -0.14 exists between exports and inflation, and it proves to be statistically significant at the 5% level. This suggests that as one indicator increases, the other decreases.
 
 -------------------
