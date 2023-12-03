@@ -35,4 +35,6 @@ the countries that rely on oil revenue such as Saudi Arabia and other gulf count
 
 ## Knime pipeline
 
+![Knime Pipeline](https://github.com/Iandrewburg/Data_Engineering_Term_2_Project/blob/main/knime_pipeline.png)
+
 ## Results
