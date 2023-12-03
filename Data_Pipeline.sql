@@ -302,7 +302,7 @@ BEGIN
         e.energy_use_Value,
         f.exports_Value,
         CASE
-            WHEN a.Country_Name IN ('Algeria', 'Angola', 'Congo', 'Equatorial Guinea', 'Gabon', 'Iran', 'Iraq', 'Kuwait', 'Libya', 'Nigeria', 'Saudi Arabia', 'United Arab Emirates', 'Venezuela') THEN 1
+            WHEN a.Country_Name IN ('Algeria', 'Angola', 'Congo, Rep.', 'Equatorial Guinea', 'Gabon', 'Iran, Islamic Rep.', 'Iraq', 'Kuwait', 'Libya', 'Nigeria', 'Saudi Arabia', 'United Arab Emirates', 'Venezuela, RB') THEN 1
             ELSE 0
         END AS Is_OPEC
 	FROM
