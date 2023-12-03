@@ -304,7 +304,11 @@ BEGIN
         CASE
             WHEN a.Country_Name IN ('Algeria', 'Angola', 'Congo, Rep.', 'Equatorial Guinea', 'Gabon', 'Iran, Islamic Rep.', 'Iraq', 'Kuwait', 'Libya', 'Nigeria', 'Saudi Arabia', 'United Arab Emirates', 'Venezuela, RB') THEN 1
             ELSE 0
-        END AS Is_OPEC
+        END AS Is_OPEC,
+		CASE
+            WHEN a.Country_Name IN ('Argentina', 'Australia', 'Brazil', 'Canada', 'China', 'France', 'Germany', 'India', 'Indonesia', 'Italy', 'Japan', 'Mexico', 'Russia', 'Saudi Arabia', 'South Africa', 'South Korea', 'Turkey', 'United Kingdom', 'United States', 'European Union') THEN 1
+            ELSE 0
+        END AS Is_G20
 	FROM
 		Unpivoted_co2e a
 	LEFT JOIN
