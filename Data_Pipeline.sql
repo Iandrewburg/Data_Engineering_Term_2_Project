@@ -302,12 +302,12 @@ BEGIN
         CASE WHEN e.energy_use_Value = 0 THEN NULL ELSE e.energy_use_Value END AS energy_use_Value,
         CASE WHEN f.exports_Value = 0 THEN NULL ELSE f.exports_Value END AS exports_Value,
         CASE
-            WHEN a.Country_Name IN ('Algeria', 'Angola', 'Congo, Rep.', 'Equatorial Guinea', 'Gabon', 'Iran, Islamic Rep.', 'Iraq', 'Kuwait', 'Libya', 'Nigeria', 'Saudi Arabia', 'United Arab Emirates', 'Venezuela, RB') THEN 1
-            ELSE 0
+            WHEN a.Country_Name IN ('Algeria', 'Angola', 'Congo, Rep.', 'Equatorial Guinea', 'Gabon', 'Iran, Islamic Rep.', 'Iraq', 'Kuwait', 'Libya', 'Nigeria', 'Saudi Arabia', 'United Arab Emirates', 'Venezuela, RB') THEN TRUE
+            ELSE FALSE
         END AS Is_OPEC,
 		CASE
-            WHEN a.Country_Name IN ('Argentina', 'Australia', 'Brazil', 'Canada', 'China', 'France', 'Germany', 'India', 'Indonesia', 'Italy', 'Japan', 'Mexico', 'Russia', 'Saudi Arabia', 'South Africa', 'South Korea', 'Turkey', 'United Kingdom', 'United States', 'European Union') THEN 1
-            ELSE 0
+            WHEN a.Country_Name IN ('Argentina', 'Australia', 'Brazil', 'Canada', 'China', 'France', 'Germany', 'India', 'Indonesia', 'Italy', 'Japan', 'Mexico', 'Russia', 'Saudi Arabia', 'South Africa', 'South Korea', 'Turkey', 'United Kingdom', 'United States', 'European Union') THEN TRUE
+            ELSE FALSE
         END AS Is_G20
 	FROM
 		Unpivoted_co2e a
