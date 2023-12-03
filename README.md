@@ -29,6 +29,8 @@ the countries that rely on oil revenue such as Saudi Arabia and other gulf count
 
 ## EER diagram
 
+![EER Diagram of the Indicator Data Tables](https://github.com/Iandrewburg/Data_Engineering_Term_2_Project/blob/main/ER_Indicators.png)
+
 ## Knime pipeline
 
 ## Results
