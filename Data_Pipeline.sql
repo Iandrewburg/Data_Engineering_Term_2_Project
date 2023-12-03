@@ -291,6 +291,53 @@ BEGIN
 		UNION ALL
 		SELECT Country_Name, '2022', `2022` FROM exports
     ),
+    	Unpivoted_gdp AS (
+		SELECT Country_Name, '2000' AS Year, `2000` AS gdp_Value FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2001', `2001` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2002', `2002` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2003', `2003` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2004', `2004` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2005', `2005` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2006', `2006` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2007', `2007` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2008', `2008` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2009', `2009` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2010', `2010` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2011', `2011` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2012', `2012` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2013', `2013` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2014', `2014` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2015', `2015` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2016', `2016` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2017', `2017` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2018', `2018` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2019', `2019` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2020', `2020` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2021', `2021` FROM gdp
+		UNION ALL
+		SELECT Country_Name, '2022', `2022` FROM gdp
+    ),
 	Joined_Data AS (
     SELECT
        a.Country_Name,
@@ -301,6 +348,7 @@ BEGIN
         CASE WHEN d.energy_prod_coal_Value = 0 THEN NULL ELSE d.energy_prod_coal_Value END AS energy_prod_coal_Value,
         CASE WHEN e.energy_use_Value = 0 THEN NULL ELSE e.energy_use_Value END AS energy_use_Value,
         CASE WHEN f.exports_Value = 0 THEN NULL ELSE f.exports_Value END AS exports_Value,
+        CASE WHEN g.gdp_value = 0 THEN NULL ELSE g.gdp_Value END AS gdp_value,
         CASE
             WHEN a.Country_Name IN ('Algeria', 'Angola', 'Congo, Rep.', 'Equatorial Guinea', 'Gabon', 'Iran, Islamic Rep.', 'Iraq', 'Kuwait', 'Libya', 'Nigeria', 'Saudi Arabia', 'United Arab Emirates', 'Venezuela, RB') THEN TRUE
             ELSE FALSE
@@ -321,6 +369,8 @@ BEGIN
 		Unpivoted_energy_use e ON a.Country_Name = e.Country_Name AND a.Year = e.Year
 	LEFT JOIN
 		Unpivoted_exports f ON a.Country_Name = f.Country_Name AND a.Year = f.Year
+	LEFT JOIN
+		Unpivoted_gdp g ON a.Country_Name = g.Country_Name AND a.Year = g.Year
 	)
 	SELECT * FROM Joined_Data;
 END //

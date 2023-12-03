@@ -274,10 +274,10 @@ DROP TABLE IF EXISTS `gdp`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `gdp` (
-  `Country_Name` varchar(100) NOT NULL,
-  `Country_Code` varchar(100) NOT NULL,
-  `Indicator_Name` varchar(100) NOT NULL,
-  `Indicator_Code` varchar(100) NOT NULL,
+  `Country_Name` text,
+  `Country_Code` text,
+  `Indicator_Name` text,
+  `Indicator_Code` text,
   `2000` double DEFAULT NULL,
   `2001` double DEFAULT NULL,
   `2002` double DEFAULT NULL,
