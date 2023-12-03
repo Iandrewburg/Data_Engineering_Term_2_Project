@@ -15,6 +15,14 @@ the countries that rely on oil revenue such as Saudi Arabia and other gulf count
 
 ## Data sources
 
+- [Electricity production from coal sources (% of total)](https://data.worldbank.org/indicator/EG.ELC.COAL.ZS)
+- [Energy use (kg of oil equivalent per capita)](https://data.worldbank.org/indicator/EG.USE.PCAP.KG.OE)
+- [CO2 emissions from liquid fuel consumption (kt)](https://data.worldbank.org/indicator/EN.ATM.CO2E.LF.KT)
+- [CO2 emissions from manufacturing industries and construction (% of total fuel combustion)](https://data.worldbank.org/indicator/EN.CO2.MANF.ZS)
+- [Exports of goods and services (% of GDP)](https://data.worldbank.org/indicator/NE.EXP.GNFS.ZS)
+- [Inflation, GDP deflator (annual %)](https://data.worldbank.org/indicator/NY.GDP.DEFL.KD.ZG)
+
+  
 ## Setup
 
 ## Technical Choices
