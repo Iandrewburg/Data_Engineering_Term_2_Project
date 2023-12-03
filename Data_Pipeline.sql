@@ -56,52 +56,52 @@ BEGIN
 		UNION ALL
 		SELECT Country_Name, '2022', `2022` FROM co2e
 	),
-	Unpivoted_gdp AS (
-		SELECT Country_Name, '2000' AS Year, `2000` AS gdp_Value FROM gdp
+	Unpivoted_inflation_gdp_deflator AS (
+		SELECT Country_Name, '2000' AS Year, `2000` AS inflation_gdp_deflator_Value FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2001', `2001` FROM gdp
+		SELECT Country_Name, '2001', `2001` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2002', `2002` FROM gdp
+		SELECT Country_Name, '2002', `2002` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2003', `2003` FROM gdp
+		SELECT Country_Name, '2003', `2003` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2004', `2004` FROM gdp
+		SELECT Country_Name, '2004', `2004` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2005', `2005` FROM gdp
+		SELECT Country_Name, '2005', `2005` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2006', `2006` FROM gdp
+		SELECT Country_Name, '2006', `2006` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2007', `2007` FROM gdp
+		SELECT Country_Name, '2007', `2007` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2008', `2008` FROM gdp
+		SELECT Country_Name, '2008', `2008` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2009', `2009` FROM gdp
+		SELECT Country_Name, '2009', `2009` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2010', `2010` FROM gdp
+		SELECT Country_Name, '2010', `2010` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2011', `2011` FROM gdp
+		SELECT Country_Name, '2011', `2011` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2012', `2012` FROM gdp
+		SELECT Country_Name, '2012', `2012` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2013', `2013` FROM gdp
+		SELECT Country_Name, '2013', `2013` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2014', `2014` FROM gdp
+		SELECT Country_Name, '2014', `2014` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2015', `2015` FROM gdp
+		SELECT Country_Name, '2015', `2015` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2016', `2016` FROM gdp
+		SELECT Country_Name, '2016', `2016` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2017', `2017` FROM gdp
+		SELECT Country_Name, '2017', `2017` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2018', `2018` FROM gdp
+		SELECT Country_Name, '2018', `2018` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2019', `2019` FROM gdp
+		SELECT Country_Name, '2019', `2019` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2020', `2020` FROM gdp
+		SELECT Country_Name, '2020', `2020` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2021', `2021` FROM gdp
+		SELECT Country_Name, '2021', `2021` FROM inflation_gdp_deflator
 		UNION ALL
-		SELECT Country_Name, '2022', `2022` FROM gdp
+		SELECT Country_Name, '2022', `2022` FROM inflation_gdp_deflator
 	),
 	Unpivoted_co2e_from_manufacture AS (
 		SELECT Country_Name, '2000' AS Year, `2000` AS co2e_manf_Value FROM co2e_from_manufacture
@@ -296,7 +296,7 @@ BEGIN
        a.Country_Name,
         a.Year,
         CASE WHEN a.co2e_Value = 0 THEN NULL ELSE a.co2e_Value END AS co2e_Value,
-        CASE WHEN b.gdp_Value = 0 THEN NULL ELSE b.gdp_Value END AS gdp_Value,
+        CASE WHEN b.inflation_gdp_deflator_Value = 0 THEN NULL ELSE b.inflation_gdp_deflator_Value END AS inflation_gdp_deflator_Value,
         CASE WHEN c.co2e_manf_Value = 0 THEN NULL ELSE c.co2e_manf_Value END AS co2e_manf_Value,
         CASE WHEN d.energy_prod_coal_Value = 0 THEN NULL ELSE d.energy_prod_coal_Value END AS energy_prod_coal_Value,
         CASE WHEN e.energy_use_Value = 0 THEN NULL ELSE e.energy_use_Value END AS energy_use_Value,
@@ -312,7 +312,7 @@ BEGIN
 	FROM
 		Unpivoted_co2e a
 	LEFT JOIN
-		Unpivoted_gdp b ON a.Country_Name = b.Country_Name AND a.Year = b.Year
+		Unpivoted_inflation_gdp_deflator b ON a.Country_Name = b.Country_Name AND a.Year = b.Year
 	LEFT JOIN
 		Unpivoted_co2e_from_manufacture c ON a.Country_Name = c.Country_Name AND a.Year = c.Year
 	LEFT JOIN
