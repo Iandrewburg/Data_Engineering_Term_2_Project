@@ -293,14 +293,14 @@ BEGIN
     ),
 	Joined_Data AS (
     SELECT
-        a.Country_Name,
+       a.Country_Name,
         a.Year,
-        a.co2e_Value,
-        b.gdp_Value,
-        c.co2e_manf_Value,
-        d.energy_prod_coal_Value,
-        e.energy_use_Value,
-        f.exports_Value,
+        CASE WHEN a.co2e_Value IS NULL THEN 'Null' ELSE a.co2e_Value END AS co2e_Value,
+        CASE WHEN b.gdp_Value IS NULL THEN 'Null' ELSE b.gdp_Value END AS gdp_Value,
+        CASE WHEN c.co2e_manf_Value IS NULL THEN 'Null' ELSE c.co2e_manf_Value END AS co2e_manf_Value,
+        CASE WHEN d.energy_prod_coal_Value IS NULL THEN 'Null' ELSE d.energy_prod_coal_Value END AS energy_prod_coal_Value,
+        CASE WHEN e.energy_use_Value IS NULL THEN 'Null' ELSE e.energy_use_Value END AS energy_use_Value,
+        CASE WHEN f.exports_Value IS NULL THEN 'Null' ELSE f.exports_Value END AS exports_Value,
         CASE
             WHEN a.Country_Name IN ('Algeria', 'Angola', 'Congo, Rep.', 'Equatorial Guinea', 'Gabon', 'Iran, Islamic Rep.', 'Iraq', 'Kuwait', 'Libya', 'Nigeria', 'Saudi Arabia', 'United Arab Emirates', 'Venezuela, RB') THEN 1
             ELSE 0
