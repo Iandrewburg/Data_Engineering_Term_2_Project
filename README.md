@@ -16,7 +16,7 @@
 
 ## Introduction
 
-In our project, we aim to explore the relationship between crude oil prices, the GDP of G20 and OPEC countries, and export values. As a proxy variable for crude oil prices, we are using West Texas Intermediate (WTI), a specific type of crude oil primarily produced in the United States, particularly in West Texas. WTI is a widely recognized benchmark for crude oil pricing worldwide.
+In our project, we aim to explore the relationship between crude oil prices, the inflation of G20 and OPEC countries, and export values. As a proxy variable for crude oil prices, we are using West Texas Intermediate (WTI), a specific type of crude oil primarily produced in the United States, particularly in West Texas. WTI is a widely recognized benchmark for crude oil pricing worldwide.
 
 Our objective is to delve into the dynamics of crude oil pricing and understand how it interacts with various factors, including exports and economic conditions.
 
