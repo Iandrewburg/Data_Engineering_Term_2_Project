@@ -290,17 +290,21 @@ BEGIN
 		SELECT Country_Name, '2021', `2021` FROM exports
 		UNION ALL
 		SELECT Country_Name, '2022', `2022` FROM exports
-	),
+    ),
 	Joined_Data AS (
-	SELECT
-		a.Country_Name,
-		a.Year,
-		a.co2e_Value,
-		b.gdp_Value,
-		c.co2e_manf_Value,
-		d.energy_prod_coal_Value,
-		e.energy_use_Value,
-		f.exports_Value
+    SELECT
+        a.Country_Name,
+        a.Year,
+        a.co2e_Value,
+        b.gdp_Value,
+        c.co2e_manf_Value,
+        d.energy_prod_coal_Value,
+        e.energy_use_Value,
+        f.exports_Value,
+        CASE
+            WHEN a.Country_Name IN ('Algeria', 'Angola', 'Congo', 'Equatorial Guinea', 'Gabon', 'Iran', 'Iraq', 'Kuwait', 'Libya', 'Nigeria', 'Saudi Arabia', 'United Arab Emirates', 'Venezuela') THEN 1
+            ELSE 0
+        END AS Is_OPEC
 	FROM
 		Unpivoted_co2e a
 	LEFT JOIN
