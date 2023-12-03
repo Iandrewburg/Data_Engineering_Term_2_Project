@@ -31,6 +31,7 @@ The source of national economic and environmental footprint data is the World Ba
 - [CO2 emissions from manufacturing industries and construction (% of total fuel combustion)](https://data.worldbank.org/indicator/EN.CO2.MANF.ZS)
 - [Exports of goods and services (% of GDP)](https://data.worldbank.org/indicator/NE.EXP.GNFS.ZS)
 - [Inflation, GDP deflator (annual %)](https://data.worldbank.org/indicator/NY.GDP.DEFL.KD.ZG)
+- [GDP per capita, PPP (current international $)](https://data.worldbank.org/indicator/NY.GDP.PCAP.PP.CD)
 
 We have enriched the economic and environmental indicator data with real asset prices such as commodities using the [Yahoo Finance API](https://developer.yahoo.com/api/). West Texas Intermediate (WTI) serves as a proxy variable for oil prices as it is the world's largest producer.
 
