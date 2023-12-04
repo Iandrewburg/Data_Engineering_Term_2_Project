@@ -94,6 +94,6 @@ Upon closer examination, we note that the correlations are not statistically sig
 ### G20 Countries
 ![Correltions G20](https://github.com/Iandrewburg/Data_Engineering_Term_2_Project/blob/main/corG20.png)
 
-Turning our attention to the correlations for G20 countries, we uncover different outcomes. A negative moderate correlation of -0.14 exists between exports and inflation, and it proves to be statistically significant at the 5% level. This suggests that as one indicator increases, the other decreases. The other correlation that was detected was between GDP and average WTI. The correlation coefficient is -0.19 indicating a negative relationship between GDP and average WTI.
+Turning our attention to the correlations for G20 countries, we uncover different outcomes. A negative moderate correlation of -0.14 exists between exports and inflation, and it proves to be statistically significant at the 5% level. This suggests that as one indicator increases, the other decreases. The other correlation that was detected was between GDP and average WTI. The correlation coefficient is -0.19 indicating a negative relationship between GDP and average WTI. The p-value for the correlation of GDP and average WTI is below the 1% threshold, showing to be statistically significant. 
 
 -------------------
