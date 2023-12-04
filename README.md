@@ -87,13 +87,12 @@ We have used a MySQL connector to connect Knime with our database. The pipeline 
 
 Based on the correlation matrix for OPEC countries, we observe that the correlation between exports and the average WTI, as well as the correlation between inflation value and the average WTI, is positive.
 
-![Correlation Matrix OPEC](https://github.com/Iandrewburg/Data_Engineering_Term_2_Project/blob/main/corr1.png)
+![Correlation Matrix OPEC](https://github.com/Iandrewburg/Data_Engineering_Term_2_Project/blob/main/corrheatmap.png)
 
 Upon closer examination, we note that the correlation is not statistically significant, as the p-value exceeds 0.1.
-![Correltions OPEC](https://github.com/Iandrewburg/Data_Engineering_Term_2_Project/blob/main/cor2.png)
-
+![Correltions OPEC](https://github.com/Iandrewburg/Data_Engineering_Term_2_Project/blob/main/corOPEC.png)
 ### G20 Countries
-![Correltions G20](https://github.com/Iandrewburg/Data_Engineering_Term_2_Project/blob/main/cor3.png)
+![Correltions G20](https://github.com/Iandrewburg/Data_Engineering_Term_2_Project/blob/main/corG20.png)
 
 Turning our attention to the correlations for G20 countries, we uncover different outcomes. A negative moderate correlation of -0.14 exists between exports and inflation, and it proves to be statistically significant at the 5% level. This suggests that as one indicator increases, the other decreases.
 
