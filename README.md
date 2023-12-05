@@ -1,5 +1,11 @@
 # Data_Engineering_Term_2_Project
 
+**TEAM MEMBERS**
+- Ian Brandenburg
+- David Szabados
+- Jana Hochel
+- Artyom Ashigov
+
 **Table of Contents**
 - [Introduction](#introduction)
 - [Dataset](#dataset)
