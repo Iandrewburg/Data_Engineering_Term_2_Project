@@ -19,6 +19,7 @@
 - [Results](#results)
   - [OPEC Countries](#opec-countries)
   - [G20 Countries](#g20-countries)
+  - [The Effect of Volume and Price on Inflation](#the-effect-of-volume-and-price-on-inflation)
 
 ## Introduction
 
@@ -101,5 +102,11 @@ Upon closer examination, we note that the correlations are not statistically sig
 ![Correltions G20](https://github.com/Iandrewburg/Data_Engineering_Term_2_Project/blob/main/corG20.png)
 
 Turning our attention to the correlations for G20 countries, we uncover different outcomes. A negative moderate correlation of -0.14 exists between exports and inflation, and it proves to be statistically significant at the 5% level. This suggests that as one indicator increases, the other decreases. The other correlation that was detected was between GDP and average WTI. The correlation coefficient is -0.19 indicating a negative relationship between GDP and average WTI. The p-value for the correlation of GDP and average WTI is below the 1% threshold, showing to be statistically significant. 
+
+### The Effect of Volume and Price on Inflation
+![Linear Regression](https://github.com/Iandrewburg/Data_Engineering_Term_2_Project/blob/main/linear_regression.png)
+
+On the global level, the volume of oil stocks sold seems to decrease inflation whilst the higher price of the stock seems to have a positive effect on inflation. This may be linked to the volume of oil traded on the market. This is consistent with the law of supply and demand although it explains only a small percentage of variation of inflation. 
+
 
 -------------------
